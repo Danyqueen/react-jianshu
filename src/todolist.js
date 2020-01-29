@@ -4,6 +4,7 @@ import { Input, Button, List } from 'antd'
 // 会自动去找store中的index.js
 import store from './store'
 import { getInputChangeAction, addItemAction, deleteItemAction } from './store/actionCreators'
+import axios from 'axios'
 
 class TodoList extends Component {
   constructor(props) {
@@ -49,13 +50,19 @@ class TodoList extends Component {
     )
   }
 
-  handleInputChange(e) {
+  componentDidMount () {
+    axios.get('/list.json').then(res => {
+      console.log(res)
+    })
+  }
+
+  handleInputChange (e) {
     // 创建与redux中store通信的action
     const action = getInputChangeAction(e.target.value)
     store.dispatch(action)
   }
 
-  handleStoreChange() {
+  handleStoreChange () {
     // 组件页面的数据更新为最新数据，联动
     this.setState(store.getState())
   }
