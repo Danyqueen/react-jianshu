@@ -67,6 +67,7 @@ export const NavSearch = styled.input.attrs({
   width: 160px;
   height: 38px;
   margin-top: 9px;
+  margin-left: 20px;
   padding: 0 20px;
   box-sizing: border-box;
   border: none;
@@ -93,6 +94,47 @@ export const NavSearch = styled.input.attrs({
     width: 160px;
   }
 `
+export const SearchInfo = styled.div`
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 260px;
+  padding: 10px;
+  color: #999;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+`
+export const SearchInfoTitle = styled.div`
+  font-size: 14px;
+  padding: 10px;
+`
+
+export const SearchInfoSwitch = styled.span`
+  cursor: pointer;
+  float: right;
+  font-size: 14px;
+  .spin {
+    display: block;
+    float: left;
+    margin: 0 5px;
+		transition: all .2s ease-in;
+		transform-origin: center center;
+  }
+`
+
+export const SearchInfoList = styled.div`
+  overflow: hidden;
+`
+
+export const SearchInfoItem = styled.a`
+  display: block;
+  float: left;
+  margin: 5px;
+  padding: 5px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+`
+
 export const Addtion = styled.div`
   line-height: 56px;
   position: absolute;
