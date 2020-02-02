@@ -49,8 +49,12 @@
 // import { combineReducers } from 'redux'
 // 从redux-immutable中引入的是immutable对象:注意看7.9,7.10
 import { combineReducers } from 'redux-immutable'
-import { reducer as headerReducer } from '../common/header/store';
+import { reducer as headerReducer } from '../common/header/store'
+import { reducer as homeReducer } from '../pages/home/store'
+import { reducer as detailReducer } from '../pages/detail/store'
 
 export default combineReducers({
-  header: headerReducer
+  header: headerReducer,
+  home: homeReducer,
+  detail: detailReducer
 })
